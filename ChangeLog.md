@@ -6,6 +6,14 @@
 
 ## [Released] (Last version)
 
+## [1.0.6] - 2019-06-01
+### Added
+- แก้ URL API เพื่อรองรับ PBX version 2
+- แก้ RTP Time เพื่อรองรับ PBX version 2
+
+### TAG
+- Commit [3155cb4](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/3155cb4642bd128da58bbc004ac5404ac7b40b3b)
+
 ## [1.0.5] - 2019-04-24
 ### Added
 - ปรับสถานะ DND ให้ชัดเจนขึ้น
@@ -57,6 +65,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.0.6]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.6/TTRS-VRS-V.1.0.6-28-g3155cb4.exe
 [1.0.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.5/TTRS-VRS-V.1.0.5-27-gfeec918.exe
 [1.0.4]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.4/TTRS-VRS-V.1.0.4-25-g4f123c5.exe
 [1.0.3]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.3/TTRS-VRS-V.1.0.3-23-g5deb0f0.exe
