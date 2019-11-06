@@ -6,6 +6,17 @@
 
 ## [Released] (Last version)
 
+## [1.0.7] - 2019-11-06
+### Added
+- เพิ่มรูปแบบการแสดงผล VRI
+- กำหนด SIP port random เป็นค่าเริ่มต้น
+- กำหนด  RTP port range  audio 7078 - 7098, video 9078 - 9098 เป็นค่าเริ่มต้น
+- แก้ไขการเรียก VRS API ใหม่
+- เพิ่มตัวอย่าง Config file สำหรับ VRS API
+
+### TAG
+- Commit [067e055](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/067e055e8871b6b862447e50be2a2bee13249e17)
+
 ## [1.0.6] - 2019-06-01
 ### Added
 - แก้ URL API เพื่อรองรับ PBX version 2
@@ -65,6 +76,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.0.7]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.7/TTRS-VRS-V.1.0.7-29-g067e055.exe
 [1.0.6]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.6/TTRS-VRS-V.1.0.6-28-g3155cb4.exe
 [1.0.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.5/TTRS-VRS-V.1.0.5-27-gfeec918.exe
 [1.0.4]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.4/TTRS-VRS-V.1.0.4-25-g4f123c5.exe
