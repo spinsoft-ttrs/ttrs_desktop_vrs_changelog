@@ -6,6 +6,15 @@
 
 ## [Released] (Last version)
 
+## [1.0.10] - 2020-04-22
+### Added
+- เพิ่มรองรับแสดงชื่อผู้ใช้ภาษาไทย
+- แก้ไขการใช้งาน Receiving ในรูปแบบวิดีโอ
+- แก้ไขการดีบั๊ก RTT
+
+### TAG
+- Commit [089897a](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/089897a0437abe3fc80a629462233527223d97f2)
+
 ## [1.0.9] - 2020-01-16
 ### Added
 - แก้ไขปัญหาโปรแกรมแคลชตอนพิมพ์ (GUI insert RTT error)
@@ -95,6 +104,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.0.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.10/TTRS-VRS-V.1.0.10-1-g089897a.exe
 [1.0.9]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.9/TTRS-VRS-V.1.0.9-2-g60be0fd.exe
 [1.0.8]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.8/TTRS-VRS-V.1.0.8-1-gd107bf4.exe
 [1.0.7]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.7/TTRS-VRS-V.1.0.7-29-g067e055.exe
