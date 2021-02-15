@@ -6,6 +6,14 @@
 
 ## [Released] (Last version)
 
+## [1.0.12] - 2021-02-15
+### Added
+- แก้ไขปัญหาโปรแกรมปิดเมื่อรับสายเพราะชื่อล่ามยาว
+- แก้ไขปัญหาการแสดงผลชื่อผู้ใช้เพี้ยนเพราะการแปลง Encode (UTF8) ชื่อผู้ใช้ภาษาไทยผิด
+- แก้ไขปัญหาโปรแกรมปิดเมื่อการแสดงผล Debug Log ผิดพลาด
+- แก้ไขปัญหาโปรแกรมปิดเพราะไฟล์ Config ไม่ Update
+- เพิ่มฟังก์ชันการอัพโหลด Debug Log พร้อมกับ GDB Log ขึ้นเซิร์ฟเวอร์เมื่อโปรแกรมทำงานผิดพลาด
+
 ## [1.0.11] - 2021-01-20
 ### Added
 - เพิ่มรูปแบบการแสดงผล Self view ให้สามารถปรับตำแหน่งแสดงผลเจ้าหน้าที่ล่ามได้
@@ -114,6 +122,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.0.12]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.12/TTRS-VRS-V.1.0.12.exe
 [1.0.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.11/TTRS-VRS-V.1.0.11.exe
 [1.0.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.10/TTRS-VRS-V.1.0.10-1-g089897a.exe
 [1.0.9]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.9/TTRS-VRS-V.1.0.9-2-g60be0fd.exe
