@@ -6,6 +6,16 @@
 
 ## [Released] (Last version)
 
+## [1.0.11] - 2021-01-20
+### Added
+- เพิ่มรูปแบบการแสดงผล Self view ให้สามารถปรับตำแหน่งแสดงผลเจ้าหน้าที่ล่ามได้
+- เพิ่มรูปแบบการแสดงผล Making สีเขียว, VRI สีส้ม, Emergency สีแดง และ Receiving สีชมพู ให้ชัดขึ้น
+- เพิ่มการแสดงผลด้วยชื่อหรือเบอร์โทรบนแท็บ In-Call เมื่อโทรออกหรือรับสาย
+- เพิ่มส่วนของการปิด-เปิดเสียงฝั่งคนหูหนวกและคนหูดี
+- เพิ่มส่วนของการปิด-เปิดไมโครโฟนชองเจ้าหน้าที่ล่าม
+- เพิ่มฟังก์ชันการอ่านค่าความผิดพลาดเมื่อโปรแกรมปิดอย่างผิดปกติ โดยใช้ GDB
+- เพิ่มฟังก์ชันการอัพโหลด GDB log ขึ้นเซิร์ฟเวอร์เมื่อโปรแกรมทำงานผิดพลาด
+
 ## [1.0.10] - 2020-04-22
 ### Added
 - เพิ่มรองรับแสดงชื่อผู้ใช้ภาษาไทย
@@ -104,6 +114,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.0.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.11/TTRS-VRS-V.1.0.11.exe
 [1.0.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.10/TTRS-VRS-V.1.0.10-1-g089897a.exe
 [1.0.9]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.9/TTRS-VRS-V.1.0.9-2-g60be0fd.exe
 [1.0.8]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.8/TTRS-VRS-V.1.0.8-1-gd107bf4.exe
