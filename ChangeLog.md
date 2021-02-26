@@ -6,6 +6,11 @@
 
 ## [Released] (Last version)
 
+## [1.0.14] - 2021-02-26
+### Added
+- แก้ไขปัญหาโปรแกรมปิดเกิดจากความผิดพลาดในการ Free Memory หลายจุดของ GDB launcher
+- แก้ไขปัญหาโปรแกรมปิดเพราะ GDB launcher ทำงานผิดปกติ โดยการนำ GDB launcher
+
 ## [1.0.13] - 2021-02-24
 ### Added
 - แก้ไขปัญหาโปรแกรมปิดเมื่อวางสายเพราะ clear memory หลัง update ประวัติการโทรผิดพลาด
@@ -128,6 +133,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.0.14]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.14/TTRS-VRS-V.1.0.14.exe
 [1.0.13]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.13/TTRS-VRS-V.1.0.13-7-g5a37135.exe
 [1.0.12]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.12/TTRS-VRS-V.1.0.12.exe
 [1.0.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.11/TTRS-VRS-V.1.0.11.exe
