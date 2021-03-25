@@ -6,6 +6,42 @@
 
 ## [Released] (Last version)
 
+## [1.1.5] - 2021-03-25
+### Added
+- เพิ่มรูปแบบการโทรออกให้สามารถเลือกโทรแบบ Audio หรือ Video ได้
+- เพิ่มรูปแบบการโทรแบบประชุมสาย (Conference) ได้
+- เพิ่มรูปแบบการแสดงผลสายปกติที่เป็น Video พร้อมกัน 2 สาย
+- เพิ่มรูปแบบการแสดงผล Self view ให้สามารถปรับขนาดการแสดงผลเจ้าหน้าที่ล่ามได้
+- เพิ่มปุ่มสำหรับ เปิด-ปิด Self view ได้เพราะในการโทรประชุมสายมีการแสดงผลเจ้าหน้าที่ล่ามในภาพอยู่แล้ว
+- ปรับให้ต้อง Login ทุกครั้งที่เปิดโปรแกรม
+- เปลี่ยนปุ่มควบคุมแต่ละสายให้สามารถคุมได้จากทุกแท็บ
+- สายที่เป็นการโทรแบบประชุมสายจะเปลี่ยนชื่อแท็บเป็นคำว่า “Conference”
+- เปลี่ยน icon ปุ่มโทรเข้า และวางสาย
+- เปลี่ยน icon ปุ่มโทร Conference
+
+## [1.1.4] - 2021-03-15
+### Added
+- แก้ไขปัญหาโปรแกรมปิดเกิดจาก UI ใหม่ไม่สามารถวางสาย Miss call ที่เร็วเกิน 1 วินาที เนื่องจากการดึงข้อมูลยังไม่เสร็จ  
+- แก้ไขปัญหาอยู่ๆมี popup ขึ้นให้ login ใหม่ แล้วสถานะหลุด เลยต้อง login ใหม่ถึงจะใช้งานได้
+
+## [1.1.3] - 2021-03-12
+### Added
+- แก้ไขปัญหาโปรแกรมปิดเกิดจาก UI ใหม่ไม่สามารถการรับสายใหม่ขณะที่สายเก่ายังวางสายไม่สมบูรณ์ได้ 
+- แก้ไขปัญหาเลือกเบอร์ที่ประวัติ แล้วกดโทรออกอีกรอบไม่ได้
+
+## [1.1.2] - 2021-03-12
+### Added
+- ปรับปรุง GDB launcher เวอร์ชั่นใหม่ที่สามารถอัพโหลด GDB log ขึ้นเซิร์ฟเวอร์และจะไม่ทำให้โปรแกรมปิดเมื่อ GDB launcher ทำงานผิดปกติ
+- แก้ไขปัญหาการโทรออกเวลาช่องหมายเลขโทรออกเป็นช่องเปล่าได้
+
+## [1.1.1] - 2021-03-11
+### Added
+- แก้ไขปัญหาการแสดงผล Making , VRI, Emergency และ Receiving ที่มีการแสดงใน tab ที่ไม่ถูกต้อง 
+
+## [1.1.0] - 2021-03-08
+### Added
+- ปรับปรุง UI ใหม่ให้สามารถรองรับการทำงานแบบประชุมสาย (Conference) ได้
+
 ## [1.0.14] - 2021-02-26
 ### Added
 - แก้ไขปัญหาโปรแกรมปิดเกิดจากความผิดพลาดในการ Free Memory หลายจุดของ GDB launcher
@@ -133,6 +169,12 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.5/TTRS-VRS-V.1.1.5.exe
+[1.1.4]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.4/TTRS-VRS-V.1.1.4.exe
+[1.1.3]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.3/TTRS-VRS-V.1.1.3.exe
+[1.1.2]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.2/TTRS-VRS-V.1.1.2.exe
+[1.1.1]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.1/TTRS-VRS-V.1.1.1.exe
+[1.1.0]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.0/TTRS-VRS-V.1.1.0.exe
 [1.0.14]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.14/TTRS-VRS-V.1.0.14.exe
 [1.0.13]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.13/TTRS-VRS-V.1.0.13-7-g5a37135.exe
 [1.0.12]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.12/TTRS-VRS-V.1.0.12.exe
