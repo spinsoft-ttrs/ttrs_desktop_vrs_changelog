@@ -6,6 +6,12 @@
 
 ## [Released] (Last version)
 
+## [1.1.6] - 2021-03-31
+### Added
+- แก้ปัญหาวางสายคนหูหนวกที่เกิดจาก Audio Stream timeout โดยเพิ่มการเช็ค Video Stream timeout ของสายที่โทรแบบ Video
+- แก้ปัญหาการส่งข้อความที่นำหน้าด้วย Space Bar จากโปรแกรม TTRS-VRS ฝั่งล่าม แล้วทำให้โปรแกรม TTRS Video บน Mobile ดับ โดยป้องกันการขึ้นต้นข้อความด้วย Space Bar
+- แก้ปัญหาไม่บันทึก Chat Log ในบางครั้ง โดยการเพิ่มเงื่อนไขในการบันทึก Chat Log ตอนจบการสนธนาให้ครบทุกเงื่อนไข
+
 ## [1.1.5] - 2021-03-26
 ### Added
 - เพิ่มรูปแบบการโทรออกให้สามารถเลือกโทรแบบ Audio หรือ Video ได้
@@ -169,6 +175,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.6]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.6/TTRS-VRS-V.1.1.6.exe
 [1.1.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.5/TTRS-VRS-V.1.1.5.exe
 [1.1.4]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.4/TTRS-VRS-V.1.1.4.exe
 [1.1.3]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.3/TTRS-VRS-V.1.1.3.exe
