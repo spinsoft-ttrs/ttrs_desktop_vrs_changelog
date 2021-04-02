@@ -6,6 +6,13 @@
 
 ## [Released] (Last version)
 
+## [1.1.7] - 2021-04-03
+### Added
+- แก้ปัญหาโปรแกรม TTRS-VRS ดับเมื่อวางสาย Receiving เกิดจากการ Clear Chat room ของสายก่อนหน้าไม่หมดทำให้โปรแกรมดับตอนพยายามลบ Chatroom ที่ไม่มีแล้ว แก้ไขโดยการเช็ค Clear Chat room ตอนวางสายให้หมด
+- เพิ่มส่วนปิดห้อง Conference room โดยการกดปุ่มวางสายทั้งหมด เมื่อเจ้าหน้าที่ล่ามต้องการยุติการประชุมและปิดห้อง Conference room ทันทีเมื่อวางสาย Conference
+- เพิ่มให้วางสายทุกสายเมื่อกดปุ่ม Logout
+- กำหนดให้ต้อง Login ทุกครั้งเมื่อเปิดโปรแกรม TTRS-VRS
+
 ## [1.1.6] - 2021-03-31
 ### Added
 - แก้ปัญหาวางสายคนหูหนวกที่เกิดจาก Audio Stream timeout โดยเพิ่มการเช็ค Video Stream timeout ของสายที่โทรแบบ Video
@@ -176,6 +183,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.7]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.7/TTRS-VRS-V.1.1.7.exe
 [1.1.6]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.6/TTRS-VRS-V.1.1.6.exe
 [1.1.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.5/TTRS-VRS-V.1.1.5.exe
 [1.1.4]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.4/TTRS-VRS-V.1.1.4.exe
