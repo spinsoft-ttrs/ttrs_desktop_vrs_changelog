@@ -6,6 +6,16 @@
 
 ## [Released] (Last version)
 
+## [1.1.8] - 2021-04-06
+### Added
+- เพิ่มส่วนตรวจสอบการ Logout ของโปรแกรม TTRS-VRS โดยจะทำการส่งเคลียร์คิวของเจ้าหน้าที่ล่ามที่ Logout ออกให้หมดแล้วจึงค่อยปิดโปรแกรม
+- แก้ไขปัญหาโปรแกรม TTRS-VRS ปิดตอนหูหนวกวางสาย เกิดจากการตั้งค่า Default Self View หลังจากสายได้ทำการ Terminate ไปแล้ว
+- แก้ไขปัญหาเมื่อกดโทรแล้วโปรแกรม TTRS-VRS ไม่รับ key ใดๆ และไม่ตอบสนอง เกิดจาก UI สร้าง Dialog เลือกการโทรออกผิดพลาด แก้โดยการจัดลำดับการสร้าง UI ที่แน่นอนและเพิ่ม Time Out เมื่อไม่กดเลือกการโทรใน 10 วินาที
+- แก้ไขให้สามารถใช้ shortcut กด Ctrl+C เพื่อ Copy ข้อความจาก chat ได้
+- แก้ไขให้เวลาเปิดโปรแกรมขึ้นมาไม่แสดงภาพจากกล้อง แต่เวลาสายเข้ากล้องจะเปิดเอง และเวลาวางสายกล้องจะปิดเอง ถ้าล่ามอยากเช็คกล้องก็กดปุ่ม self view แทนได้
+
+
+
 ## [1.1.7] - 2021-04-03
 ### Added
 - แก้ปัญหาโปรแกรม TTRS-VRS ดับเมื่อวางสาย Receiving เกิดจากการ Clear Chat room ของสายก่อนหน้าไม่หมดทำให้โปรแกรมดับตอนพยายามลบ Chatroom ที่ไม่มีแล้ว แก้ไขโดยการเช็ค Clear Chat room ตอนวางสายให้หมด
@@ -183,6 +193,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.8]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.8/TTRS-VRS-V.1.1.8.exe
 [1.1.7]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.7/TTRS-VRS-V.1.1.7.exe
 [1.1.6]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.6/TTRS-VRS-V.1.1.6.exe
 [1.1.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.5/TTRS-VRS-V.1.1.5.exe
