@@ -6,6 +6,10 @@
 
 ## [Released] (Last version)
 
+## [1.1.10] - 2021-05-06
+### Added
+- นำส่วนการแสดงผลข้อมูลจำนวนล่ามที่รับสาย, ล่ามที่ว่าง และ จำนวนที่รอสายอยู่แบบ Real Time ออกเพื่อหาแนวทางการทำงานที่เหมาะสมแล้วจะเพิ่มเติมให้ในอนาคตครับ
+
 ## [1.1.9] - 2021-05-06
 ### Added
 - เพิ่ม DND รูปแบบใหม่ (DND+Last) โดยเมื่อเจ้าหน้าที่ล่ามเลือก DND+Last และกลับมาออนไลน์ จะทำให้ลำดับคิวของเจ้าหน้าที่ล่ามย้ายไปอยู่ที่ลำดับสุดท้ายของคิว
@@ -203,6 +207,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.10/TTRS-VRS-V.1.1.10.exe
 [1.1.9]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.9/TTRS-VRS-V.1.1.9.exe
 [1.1.8]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.8/TTRS-VRS-V.1.1.8.exe
 [1.1.7]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.7/TTRS-VRS-V.1.1.7.exe
