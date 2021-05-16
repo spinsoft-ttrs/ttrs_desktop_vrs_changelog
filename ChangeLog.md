@@ -6,6 +6,13 @@
 
 ## [Released] (Last version)
 
+## [1.1.11] - 2021-05-16
+### Added
+- แก้ปัญหาการแสดงผลข้อมูลจำนวนล่ามที่รับสาย, ล่ามที่ว่าง และ จำนวนที่รอสายอยู่แบบ Real Time โดยใช้ lib json
+- แก้ปัญหา ระบบ Text มีสายโทรเข้าโปรแกรม TTRS VRS แล้วไม่สามารถกดรับสายได้ โดยแก้เงื่อนไขก่อนเข้าฟังก์ชันรับสายให้ให้ถูกต้อง
+- แก้ปัญหาฟังก์ชันส่วนแสดงผล Real Time Text (RTT) ทำงานผิดพลาดแบบขึ้นหลายบรรทัดเวลาแก้ไข
+- Update mediastreamer2 ในส่วนของ 1.Fix msvideo downscaling function for x86 และ 2.Re-enable android scaler implementation เพื่อดูว่าแก้ปัญหาโปรแกรมดับเพราะ swscale-2!sws_rgb2rgb_init () ได้หรือไม่
+
 ## [1.1.10] - 2021-05-06
 ### Added
 - นำส่วนการแสดงผลข้อมูลจำนวนล่ามที่รับสาย, ล่ามที่ว่าง และ จำนวนที่รอสายอยู่แบบ Real Time ออกเพื่อหาแนวทางการทำงานที่เหมาะสมแล้วจะเพิ่มเติมให้ในอนาคตครับ
@@ -207,6 +214,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.11/TTRS-VRS-V.1.1.11.exe
 [1.1.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.10/TTRS-VRS-V.1.1.10.exe
 [1.1.9]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.9/TTRS-VRS-V.1.1.9.exe
 [1.1.8]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.8/TTRS-VRS-V.1.1.8.exe
