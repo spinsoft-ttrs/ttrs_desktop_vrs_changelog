@@ -6,6 +6,12 @@
 
 ## [Released] (Last version)
 
+## [1.1.13] - 2021-05-6
+### Added
+- เพิ่มการป้องกันสายโทรเข้าหลังการ login จากส่วนของการตั้งค่า DND ในโปรแกรม TTRS-VRS
+- แก้ปัญหาโปรแกรม TTRS-VRS ดับ ตอนโอนสายใหม่เข้า MCU เนื่องจากดึงข้อมูล User ไม่ได้ เพราะสายที่จะโอนหลุดก่อนที่โปรแกรมจะสั่งโอนสาย
+- เพิ่ม log ตัววาดเพื่อดักจับ Bug โปรแกรม TTRS-VRS ดับ จากปัญหาตัววาด function swscale-2!sws_rgb2rgb_init () ทำงานไม่สมบูรณ์
+
 ## [1.1.12] - 2021-05-17
 ### Added
 - ให้จำตำแหน่งและขนาดหน้าต่างโปรแกรม TTRS-VRS ที่ปรับไว้ล่าสุด เมื่อเปิดครั้งต่อไปแสดงหน้าต่างในตำแหน่งเดิม
@@ -219,6 +225,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.13]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.13/TTRS-VRS-V.1.1.13.exe
 [1.1.12]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.12/TTRS-VRS-V.1.1.12.exe
 [1.1.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.11/TTRS-VRS-V.1.1.11.exe
 [1.1.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.10/TTRS-VRS-V.1.1.10.exe
