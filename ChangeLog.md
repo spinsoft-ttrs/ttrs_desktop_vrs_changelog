@@ -6,6 +6,26 @@
 
 ## [Released] (Last version)
 
+## [1.1.15] - 2021-07-23
+### Added
+- เปลี่ยนรูปแบบการเชื่อมต่อโปรแกรม TTRS-VRS จาก UTP เป็น TLS
+### Fixed
+- แก้รูปแบบการเรียก Timeout API ดึงข้อมูลคิวให้เป็นแบบ Trade เพื่อป้องกันโปรแกรม TTRS-VRS ค้างเมื่อดึง API ไม่ได้
+- แก้ปัญหาโปรแกรมปิดเพราะการแสดงผลชือผู้ใช้งานผิดพลาด
+- ทดลองแก้ Code เพื่อปัญหาโปรแกรมปิดเพราะ swscale เพิ่มเติม
+
+## [1.1.14] - 2021-07-02
+### Added
+- เปลี่ยน Video codec จาก x264 เป็น openh264 เพื่อแก้ปัญหาระบบภาพและรองรับการแก้ไขในอนาคต
+- เพิ่มปุ่ม Get location button เพื่อดึงตำแหน่งปัจจุบันของผู้ใช้ โดยจะรองรับกับ Mobile App Android version 1.1.9 ขึ้นไป
+- เพิ่มปุ่ม Refresh camera button เพื่อ Refresh เปิด-ปิดกล้องล่ามใหม่ เมื่อเกิดเหตุจอล่ามดำขณะใช้งาน
+- เปลี่ยน GDB Launcher เป็น version 1.0.8 โดย GDB Launcher จะปิดตัวเองเมื่อล่ามปิดโปรแกรม TTRS-VRS
+- เพิ่ม command ลบ file config และ file database เมื่อ uninstall โปรแกรม TTRS-VRS เพื่อ update ค่า config ใหม่เมื่อ install ทุกครั้ง
+### Fixed
+- แก้ปัญหาโปรแกรมปิดเพราะ Compare NULL String
+- แก้ปัญหาโปรแกรมค้างเพราะรอ Timeout API ดึงข้อมูลคิว
+- ลดการแสดง log ในส่วน swscale เพื่อลดขนาด log ที่เก็บข้อมูล
+
 ## [1.1.13] - 2021-05-26
 ### Added
 - เพิ่มการป้องกันสายโทรเข้าหลังการ login จากส่วนของการตั้งค่า DND ในโปรแกรม TTRS-VRS
@@ -228,6 +248,8 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.15]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.15/TTRS-VRS-V.1.1.15.exe
+[1.1.14]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.14/TTRS-VRS-V.1.1.14.exe
 [1.1.13]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.13/TTRS-VRS-V.1.1.13.exe
 [1.1.12]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.12/TTRS-VRS-V.1.1.12.exe
 [1.1.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.11/TTRS-VRS-V.1.1.11.exe
