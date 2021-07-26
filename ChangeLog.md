@@ -6,6 +6,11 @@
 
 ## [Released] (Last version)
 
+## [1.1.16] - 2021-07-26
+### Fixed
+- แก้ปัญหาหน้าจอรับสายไม่แสดงเพราการเรียก Timeout API ดึงข้อมูลคิวผิดพลาด
+- แก้ปัญหาโปรแกรมปิดเพราการเรียก Timeout API ดึงข้อมูลคิวผิดพลาด
+
 ## [1.1.15] - 2021-07-23
 ### Added
 - เปลี่ยนรูปแบบการเชื่อมต่อโปรแกรม TTRS-VRS จาก UTP เป็น TLS
@@ -248,6 +253,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.16]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.16/TTRS-VRS-V.1.1.16.exe
 [1.1.15]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.15/TTRS-VRS-V.1.1.15.exe
 [1.1.14]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.14/TTRS-VRS-V.1.1.14.exe
 [1.1.13]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.13/TTRS-VRS-V.1.1.13.exe
