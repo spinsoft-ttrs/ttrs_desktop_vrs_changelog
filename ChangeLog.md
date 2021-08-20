@@ -6,6 +6,15 @@
 
 ## [Released] (Last version)
 
+## [1.1.17] - 2021-08-20
+### Added
+- เพิ่มปุ่ม Reconnect Chat เพื่อให้เจ้าหน้าที่ล่ามกดเชื่อมต่อข้อความกับผู้ใช้บริการเองได้ เมื่อเจ้าหน้าที่ล่ามหรือผู้ใช้บริการมองไม่เห็นข้อความ
+- เพิ่มการเรียก API ตอนเปิดโปรแกรม TTRS-VRS เพื่อแก้ปัญหา channel ของ Agent ค้างในระบบในกรณีที่โปรแกรมดับ
+### Fixed
+- แก้ปัญหาโปรแกรมปิดเพราะส่วน รับ-ส่งข้อความ (Chatroom) มีปัญหา
+- แก้ปัญหาโปรแกรมปิดหลังวางสายหรือโดนสายยิงเพิ่มเติม
+- แก้ปัญหาเจ้าหน้าที่ล่ามหรือผู้ใช้บริการมองไม่เห็นข้อความโดยให้เชื่อมต่อข้อความแบบอัตโนมัติเมื่อไม่มีการพิมพ์ข้อความนานเกิน 30 วินาทีหลังรับสาย
+
 ## [1.1.16] - 2021-07-26
 ### Fixed
 - แก้ปัญหาหน้าจอรับสายไม่แสดงเพราการเรียก Timeout API ดึงข้อมูลคิวผิดพลาด
@@ -253,6 +262,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.17]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.17/TTRS-VRS-V.1.1.17.exe
 [1.1.16]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.16/TTRS-VRS-V.1.1.16.exe
 [1.1.15]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.15/TTRS-VRS-V.1.1.15.exe
 [1.1.14]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.14/TTRS-VRS-V.1.1.14.exe
