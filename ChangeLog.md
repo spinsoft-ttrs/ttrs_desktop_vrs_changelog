@@ -6,6 +6,14 @@
 
 ## [Released] (Last version)
 
+## [1.1.18] - 2021-09-22
+### Added
+- เพิ่มจำนวนตัวอักษรที่สามารถส่งข้อความจากเจ้าหน้าที่ล่ามจาก 150 ตัวอักษรเป็น 500 ตัวอักษร
+### Fixed
+- แก้ปัญหาโปรแกรมปิดเพราะส่วนการแสดงผลภาพ (swscale-2.dll) มีปัญหาเพิ่มเติม
+- แก้ปัญหาเจ้าหน้าที่ล่ามมองไม่เห็นผู้ใช้บริการในส่วนของการแสดงภาพในโปรแกรมเพิ่มเติม
+- แก้ปัญหาโปรแกรมปิดเพราะส่วน รับ-ส่งข้อความ (Chatroom) มีปัญหาเพิ่มเติม
+
 ## [1.1.17] - 2021-08-20
 ### Added
 - เพิ่มปุ่ม Reconnect Chat เพื่อให้เจ้าหน้าที่ล่ามกดเชื่อมต่อข้อความกับผู้ใช้บริการเองได้ เมื่อเจ้าหน้าที่ล่ามหรือผู้ใช้บริการมองไม่เห็นข้อความ
@@ -262,6 +270,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.18]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.18/TTRS-VRS-V.1.1.18.exe
 [1.1.17]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.17/TTRS-VRS-V.1.1.17.exe
 [1.1.16]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.16/TTRS-VRS-V.1.1.16.exe
 [1.1.15]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.15/TTRS-VRS-V.1.1.15.exe
