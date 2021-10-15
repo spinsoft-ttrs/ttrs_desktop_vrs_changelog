@@ -6,6 +6,15 @@
 
 ## [Released] (Last version)
 
+## [1.1.19] - 2021-10-15
+### Added
+- เพิ่มส่วนของการเลือกรูปแบบการทรานสปอร์ต (Transport) โดยมีให้เลือกคือแบบ UTP TCP และ TLS โดยอยู่ในหัวข้อ Help->Transport Setting
+- เพิ่มปุ่มดึงข้อมูลผู้ติดต่ออีกครั้ง ในกรณีที่ดึงข้อมูลตอนสายเข้าไม่สำเร็จครับ สามารถกดปุ่มเพื่อดึงข้อมูลอีกครั้งระหว่างให้บริการได้
+### Fixed
+- แก้ปัญหาโปรแกรมปิดตอนวางสายเพิ่มเติม
+- แก้ไม่ให้กดปิดโปรแกรม หรือ โปรแกรมปิดตัวเอง ขณะกำลังให้บริการเพิ่มเติม
+- เพิ่ม log ในส่วน ms_media_stream_sessions_uninit เพื่อหาสาเหตุที่ทำให้โปรแกรม Not Response
+
 ## [1.1.18] - 2021-09-22
 ### Added
 - เพิ่มจำนวนตัวอักษรที่สามารถส่งข้อความจากเจ้าหน้าที่ล่ามจาก 150 ตัวอักษรเป็น 500 ตัวอักษร
@@ -272,6 +281,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.19]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.19/TTRS-VRS-V.1.1.19.exe
 [1.1.18]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.18/TTRS-VRS-V.1.1.18.exe
 [1.1.17]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.17/TTRS-VRS-V.1.1.17.exe
 [1.1.16]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.16/TTRS-VRS-V.1.1.16.exe
