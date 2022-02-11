@@ -6,6 +6,15 @@
 
 ## [Released] (Last version)
 
+## [1.1.20] - 2022-02-11
+### Added
+- เพิ่มการกดปุ่ม Space Bar รับสายเพิ่มเติมจากการกดปุ่ม Accept เพื่อรับสายเข้า
+- เพิ่มการตรวจสอบการรับค่าตำแหน่งปัจจุบันของผู้ใช้งาน ถ้าไม่มีการส่งข้อมูลกลับ จะมีการแจ้งเตือน เพื่อให้กดใหม่อีกครั้ง
+- ปรับโปรแกรมให้สามารถพิมพ์ text ได้ เมื่อตั้งให้โปรแกรมรับสายอัตโนมัติ
+### Fixed
+- แก้โปรแกรมปิดหลังวางสายเบื้องต้น และเก็บ Log เพิ่มเผื่อยังมีปัญหาโปรแกรมปิดหลังวางสายอื่นๆ อีก
+- แก้โปรแกรมให้ป้องกันสายโทรเข้าซ้อนขณะกำลังรับสายอยู่
+
 ## [1.1.19] - 2021-10-15
 ### Added
 - เพิ่มส่วนของการเลือกรูปแบบการทรานสปอร์ต (Transport) โดยมีให้เลือกคือแบบ UTP TCP และ TLS โดยอยู่ในหัวข้อ Help->Transport Setting
@@ -281,6 +290,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.20]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.20/TTRS-VRS-V.1.1.20.exe
 [1.1.19]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.19/TTRS-VRS-V.1.1.19.exe
 [1.1.18]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.18/TTRS-VRS-V.1.1.18.exe
 [1.1.17]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.17/TTRS-VRS-V.1.1.17.exe
