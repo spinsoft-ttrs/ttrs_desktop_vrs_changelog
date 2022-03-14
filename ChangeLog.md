@@ -6,6 +6,10 @@
 
 ## [Released] (Last version)
 
+## [1.1.22] - 2022-03-14
+### Added
+- เพิ่มการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ Pause สายคนหูดีอัตโนมัติเมื่อรับสาย จนกว่าคนหูหนวกจะรับสายจึงจะ Resume สายคนหูดีให้อัตโนมัติ แต่ถ้าคนหูหนวกไม่รับสาย 3 ครั้งติดกัน จะทำการวางสายคนหูดีทันที
+
 ## [1.1.21] - 2022-03-02
 ### Fixed
 - แก้ปัญหาโปรแกรมพิมพ์เว้นวรรคไม่ได้ เกิดจาก Function กด เว้นวรรค เพื่อใช้ในการรับสายไม่สมบูรณ์ แก้ไขให้ทำงานได้สมบูรณ์แล้ว
@@ -294,6 +298,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.22]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.22/TTRS-VRS-V.1.1.22.exe
 [1.1.21]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.21/TTRS-VRS-V.1.1.21.exe
 [1.1.20]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.20/TTRS-VRS-V.1.1.20.exe
 [1.1.19]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.19/TTRS-VRS-V.1.1.19.exe
