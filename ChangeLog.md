@@ -6,6 +6,17 @@
 
 ## [Released] (Last version)
 
+## [1.1.23] - 2022-08-05
+### Added
+- เพิ่มการตั้งค่า DND ให้เป็น Busy ผ่าน API ก่อน Register โปรแกรม เพื่อป้องกันการโทรเข้าหลังกด Login เพิ่มเติม
+- เปลี่ยน GDB Launcher เป็น version 1.0.9 โดย GDB Launcher จะตั้งค่าให้โปรแกรม TTRS VRS Agent ให้ไม่ Alway on top เมื่อเริ่มโปรแกรม
+
+### Fixed
+- แก้โปรแกรมปิดบางครั้งเมื่อโทรหา Call center ของ AIS โดยสาเหตุเกิดจากการรับ Audio Package ที่ไม่ถูกต้องเข้ามาประมวลผล
+- เพิ่ม Buffer ของการรับตัวอักษร เพื่อแก้ปัญหาโปรแกรมแสดงภาษาไทยไม่ครบเพราะ Buffer ไม่พอ
+- ปรับการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ทำการวางสายคนหูดีถ้าคนหูหนวกไม่รับสายให้เหลือ 1 ครั้ง จากเดิม 3 ครั้ง
+
+
 ## [1.1.22] - 2022-03-14
 ### Added
 - เพิ่มการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ Pause สายคนหูดีอัตโนมัติเมื่อรับสาย จนกว่าคนหูหนวกจะรับสายจึงจะ Resume สายคนหูดีให้อัตโนมัติ แต่ถ้าคนหูหนวกไม่รับสาย 3 ครั้งติดกัน จะทำการวางสายคนหูดีทันที
@@ -302,6 +313,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.23]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.23/TTRS-VRS-V.1.1.23.exe
 [1.1.22]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.22/TTRS-VRS-V.1.1.22.exe
 [1.1.21]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.21/TTRS-VRS-V.1.1.21.exe
 [1.1.20]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.20/TTRS-VRS-V.1.1.20.exe
