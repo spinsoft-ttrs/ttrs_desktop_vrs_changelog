@@ -6,6 +6,46 @@
 
 ## [Released] (Last version)
 
+## [1.1.24] - 2022-09-23
+### Added
+- เปลี่ยน GDB Launcher เป็น version 1.1.0 โดย GDB Launcher จะช่วยทำการบันทึกหน้าจอเมื่อมีการบริการแบบอัตโนมัติ
+- เพิ่มการตรวจสอบการส่ง signal ของการ logout และรอจนน่ใจว่าส่งได้ จึงจะปิดโปรแกรม
+- เพิ่มการตรวจสอบการส่ง log ไปยังเซิร์ฟเวอร์และรอจนน่ใจว่าส่งได้ จึงจะทำงานต่อ
+### Fixed
+- ปรับการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ทำการวางสายคนหูหนวก ถ้าคนหูดีวางสายก่อนคนหูหนวกจะรับสาย
+
+## [1.1.23] - 2022-08-05
+### Added
+- เพิ่มการตั้งค่า DND ให้เป็น Busy ผ่าน API ก่อน Register โปรแกรม เพื่อป้องกันการโทรเข้าหลังกด Login เพิ่มเติม
+- เปลี่ยน GDB Launcher เป็น version 1.0.9 โดย GDB Launcher จะตั้งค่าให้โปรแกรม TTRS VRS Agent ให้ไม่ Alway on top เมื่อเริ่มโปรแกรม
+
+### Fixed
+- แก้โปรแกรมปิดบางครั้งเมื่อโทรหา Call center ของ AIS โดยสาเหตุเกิดจากการรับ Audio Package ที่ไม่ถูกต้องเข้ามาประมวลผล
+- เพิ่ม Buffer ของการรับตัวอักษร เพื่อแก้ปัญหาโปรแกรมแสดงภาษาไทยไม่ครบเพราะ Buffer ไม่พอ
+- ปรับการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ทำการวางสายคนหูดีถ้าคนหูหนวกไม่รับสายให้เหลือ 1 ครั้ง จากเดิม 3 ครั้ง
+
+
+## [1.1.22] - 2022-03-14
+### Added
+- เพิ่มการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ Pause สายคนหูดีอัตโนมัติเมื่อรับสาย จนกว่าคนหูหนวกจะรับสายจึงจะ Resume สายคนหูดีให้อัตโนมัติ แต่ถ้าคนหูหนวกไม่รับสาย 3 ครั้งติดกัน จะทำการวางสายคนหูดีทันที
+
+## [1.1.21] - 2022-03-02
+### Added
+- เพิ่มการตรวจสอบการรับค่าตำแหน่งของผู้ใช้โดยจะมีการ Report ให้เจ้าหน้าที่เมื่อขอตำแหน่งแล้วไม่ได้รับตำแหน่งกลับมาภายใน 30 วินาที
+### Fixed
+- แก้ปัญหาโปรแกรมพิมพ์เว้นวรรคไม่ได้ เกิดจาก Function กด เว้นวรรค เพื่อใช้ในการรับสายไม่สมบูรณ์ แก้ไขให้ทำงานได้สมบูรณ์แล้ว
+- แก้ปัญหาข้อความ Delay โดยการแสดงเฉพาะข้อความของสายนั้นๆ ด้วยการตรวจสอบว่า Text ที่เข้ามามี username ของ Message ตรงกับ username ของ Call หรือไม่ โดยจะให้แสดงแต่ message ของตัวเองเท่านั้น
+
+
+## [1.1.20] - 2022-02-11
+### Added
+- เพิ่มการกดปุ่ม Space Bar รับสายเพิ่มเติมจากการกดปุ่ม Accept เพื่อรับสายเข้า
+- เพิ่มการตรวจสอบการรับค่าตำแหน่งปัจจุบันของผู้ใช้งาน ถ้าไม่มีการส่งข้อมูลกลับ จะมีการแจ้งเตือน เพื่อให้กดใหม่อีกครั้ง
+- ปรับโปรแกรมให้สามารถพิมพ์ text ได้ เมื่อตั้งให้โปรแกรมรับสายอัตโนมัติ
+### Fixed
+- แก้โปรแกรมปิดหลังวางสายเบื้องต้น และเก็บ Log เพิ่มเผื่อยังมีปัญหาโปรแกรมปิดหลังวางสายอื่นๆ อีก
+- แก้โปรแกรมให้ป้องกันสายโทรเข้าซ้อนขณะกำลังรับสายอยู่
+
 ## [1.1.19] - 2021-10-15
 ### Added
 - เพิ่มส่วนของการเลือกรูปแบบการทรานสปอร์ต (Transport) โดยมีให้เลือกคือแบบ UTP TCP และ TLS โดยอยู่ในหัวข้อ Help->Transport Setting
@@ -280,39 +320,44 @@
 ### TAG
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
-[Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
-[1.1.19]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.19/TTRS-VRS-V.1.1.19.exe
-[1.1.18]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.18/TTRS-VRS-V.1.1.18.exe
-[1.1.17]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.17/TTRS-VRS-V.1.1.17.exe
-[1.1.16]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.16/TTRS-VRS-V.1.1.16.exe
-[1.1.15]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.15/TTRS-VRS-V.1.1.15.exe
-[1.1.14]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.14/TTRS-VRS-V.1.1.14.exe
-[1.1.13]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.13/TTRS-VRS-V.1.1.13.exe
-[1.1.12]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.12/TTRS-VRS-V.1.1.12.exe
-[1.1.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.11/TTRS-VRS-V.1.1.11.exe
-[1.1.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.10/TTRS-VRS-V.1.1.10.exe
-[1.1.9]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.9/TTRS-VRS-V.1.1.9.exe
-[1.1.8]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.8/TTRS-VRS-V.1.1.8.exe
-[1.1.7]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.7/TTRS-VRS-V.1.1.7.exe
-[1.1.6]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.6/TTRS-VRS-V.1.1.6.exe
-[1.1.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.5/TTRS-VRS-V.1.1.5.exe
-[1.1.4]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.4/TTRS-VRS-V.1.1.4.exe
-[1.1.3]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.3/TTRS-VRS-V.1.1.3.exe
-[1.1.2]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.2/TTRS-VRS-V.1.1.2.exe
-[1.1.1]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.1/TTRS-VRS-V.1.1.1.exe
-[1.1.0]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.1.0/TTRS-VRS-V.1.1.0.exe
-[1.0.14]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.14/TTRS-VRS-V.1.0.14.exe
-[1.0.13]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.13/TTRS-VRS-V.1.0.13-7-g5a37135.exe
-[1.0.12]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.12/TTRS-VRS-V.1.0.12.exe
-[1.0.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.11/TTRS-VRS-V.1.0.11.exe
-[1.0.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.10/TTRS-VRS-V.1.0.10-1-g089897a.exe
-[1.0.9]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.9/TTRS-VRS-V.1.0.9-2-g60be0fd.exe
-[1.0.8]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.8/TTRS-VRS-V.1.0.8-1-gd107bf4.exe
-[1.0.7]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.7/TTRS-VRS-V.1.0.7-29-g067e055.exe
-[1.0.6]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.6/TTRS-VRS-V.1.0.6-28-g3155cb4.exe
-[1.0.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.5/TTRS-VRS-V.1.0.5-27-gfeec918.exe
-[1.0.4]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.4/TTRS-VRS-V.1.0.4-25-g4f123c5.exe
-[1.0.3]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.3/TTRS-VRS-V.1.0.3-23-g5deb0f0.exe
-[1.0.2]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.2/TTRS-VRS-V.1.0.2-22-g4fb0793.exe
-[1.0.1]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.1/TTRS-VRS-V.1.0.1-21-gacd8d5e.exe
-[logo]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/TTRS-VRS.png "Logo TTRS VRS"
+[Released]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.24]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.24/TTRS-VRS-V.1.1.24.exe
+[1.1.23]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.23/TTRS-VRS-V.1.1.23.exe
+[1.1.22]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.22/TTRS-VRS-V.1.1.22.exe
+[1.1.21]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.21/TTRS-VRS-V.1.1.21.exe
+[1.1.20]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.20/TTRS-VRS-V.1.1.20.exe
+[1.1.19]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.19/TTRS-VRS-V.1.1.19.exe
+[1.1.18]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.18/TTRS-VRS-V.1.1.18.exe
+[1.1.17]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.17/TTRS-VRS-V.1.1.17.exe
+[1.1.16]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.16/TTRS-VRS-V.1.1.16.exe
+[1.1.15]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.15/TTRS-VRS-V.1.1.15.exe
+[1.1.14]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.14/TTRS-VRS-V.1.1.14.exe
+[1.1.13]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.13/TTRS-VRS-V.1.1.13.exe
+[1.1.12]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.12/TTRS-VRS-V.1.1.12.exe
+[1.1.11]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.11/TTRS-VRS-V.1.1.11.exe
+[1.1.10]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.10/TTRS-VRS-V.1.1.10.exe
+[1.1.9]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.9/TTRS-VRS-V.1.1.9.exe
+[1.1.8]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.8/TTRS-VRS-V.1.1.8.exe
+[1.1.7]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.7/TTRS-VRS-V.1.1.7.exe
+[1.1.6]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.6/TTRS-VRS-V.1.1.6.exe
+[1.1.5]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.5/TTRS-VRS-V.1.1.5.exe
+[1.1.4]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.4/TTRS-VRS-V.1.1.4.exe
+[1.1.3]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.3/TTRS-VRS-V.1.1.3.exe
+[1.1.2]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.2/TTRS-VRS-V.1.1.2.exe
+[1.1.1]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.1/TTRS-VRS-V.1.1.1.exe
+[1.1.0]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.0/TTRS-VRS-V.1.1.0.exe
+[1.0.14]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.14/TTRS-VRS-V.1.0.14.exe
+[1.0.13]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.13/TTRS-VRS-V.1.0.13-7-g5a37135.exe
+[1.0.12]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.12/TTRS-VRS-V.1.0.12.exe
+[1.0.11]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.11/TTRS-VRS-V.1.0.11.exe
+[1.0.10]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.10/TTRS-VRS-V.1.0.10-1-g089897a.exe
+[1.0.9]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.9/TTRS-VRS-V.1.0.9-2-g60be0fd.exe
+[1.0.8]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.8/TTRS-VRS-V.1.0.8-1-gd107bf4.exe
+[1.0.7]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.7/TTRS-VRS-V.1.0.7-29-g067e055.exe
+[1.0.6]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.6/TTRS-VRS-V.1.0.6-28-g3155cb4.exe
+[1.0.5]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.5/TTRS-VRS-V.1.0.5-27-gfeec918.exe
+[1.0.4]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.4/TTRS-VRS-V.1.0.4-25-g4f123c5.exe
+[1.0.3]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.3/TTRS-VRS-V.1.0.3-23-g5deb0f0.exe
+[1.0.2]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.2/TTRS-VRS-V.1.0.2-22-g4fb0793.exe
+[1.0.1]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.1/TTRS-VRS-V.1.0.1-21-gacd8d5e.exe
+[logo]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/TTRS-VRS.png "Logo TTRS VRS"
