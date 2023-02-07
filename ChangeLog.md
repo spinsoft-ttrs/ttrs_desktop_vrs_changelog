@@ -6,6 +6,194 @@
 
 ## [Released] (Last version)
 
+## [1.1.24] - 2022-09-23
+### Added
+- เปลี่ยน GDB Launcher เป็น version 1.1.0 โดย GDB Launcher จะช่วยทำการบันทึกหน้าจอเมื่อมีการบริการแบบอัตโนมัติ
+- เพิ่มการตรวจสอบการส่ง signal ของการ logout และรอจนน่ใจว่าส่งได้ จึงจะปิดโปรแกรม
+- เพิ่มการตรวจสอบการส่ง log ไปยังเซิร์ฟเวอร์และรอจนน่ใจว่าส่งได้ จึงจะทำงานต่อ
+### Fixed
+- ปรับการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ทำการวางสายคนหูหนวก ถ้าคนหูดีวางสายก่อนคนหูหนวกจะรับสาย
+
+## [1.1.23] - 2022-08-05
+### Added
+- เพิ่มการตั้งค่า DND ให้เป็น Busy ผ่าน API ก่อน Register โปรแกรม เพื่อป้องกันการโทรเข้าหลังกด Login เพิ่มเติม
+- เปลี่ยน GDB Launcher เป็น version 1.0.9 โดย GDB Launcher จะตั้งค่าให้โปรแกรม TTRS VRS Agent ให้ไม่ Alway on top เมื่อเริ่มโปรแกรม
+
+### Fixed
+- แก้โปรแกรมปิดบางครั้งเมื่อโทรหา Call center ของ AIS โดยสาเหตุเกิดจากการรับ Audio Package ที่ไม่ถูกต้องเข้ามาประมวลผล
+- เพิ่ม Buffer ของการรับตัวอักษร เพื่อแก้ปัญหาโปรแกรมแสดงภาษาไทยไม่ครบเพราะ Buffer ไม่พอ
+- ปรับการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ทำการวางสายคนหูดีถ้าคนหูหนวกไม่รับสายให้เหลือ 1 ครั้ง จากเดิม 3 ครั้ง
+
+
+## [1.1.22] - 2022-03-14
+### Added
+- เพิ่มการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ Pause สายคนหูดีอัตโนมัติเมื่อรับสาย จนกว่าคนหูหนวกจะรับสายจึงจะ Resume สายคนหูดีให้อัตโนมัติ แต่ถ้าคนหูหนวกไม่รับสาย 3 ครั้งติดกัน จะทำการวางสายคนหูดีทันที
+
+## [1.1.21] - 2022-03-02
+### Added
+- เพิ่มการตรวจสอบการรับค่าตำแหน่งของผู้ใช้โดยจะมีการ Report ให้เจ้าหน้าที่เมื่อขอตำแหน่งแล้วไม่ได้รับตำแหน่งกลับมาภายใน 30 วินาที
+### Fixed
+- แก้ปัญหาโปรแกรมพิมพ์เว้นวรรคไม่ได้ เกิดจาก Function กด เว้นวรรค เพื่อใช้ในการรับสายไม่สมบูรณ์ แก้ไขให้ทำงานได้สมบูรณ์แล้ว
+- แก้ปัญหาข้อความ Delay โดยการแสดงเฉพาะข้อความของสายนั้นๆ ด้วยการตรวจสอบว่า Text ที่เข้ามามี username ของ Message ตรงกับ username ของ Call หรือไม่ โดยจะให้แสดงแต่ message ของตัวเองเท่านั้น
+
+
+## [1.1.20] - 2022-02-11
+### Added
+- เพิ่มการกดปุ่ม Space Bar รับสายเพิ่มเติมจากการกดปุ่ม Accept เพื่อรับสายเข้า
+- เพิ่มการตรวจสอบการรับค่าตำแหน่งปัจจุบันของผู้ใช้งาน ถ้าไม่มีการส่งข้อมูลกลับ จะมีการแจ้งเตือน เพื่อให้กดใหม่อีกครั้ง
+- ปรับโปรแกรมให้สามารถพิมพ์ text ได้ เมื่อตั้งให้โปรแกรมรับสายอัตโนมัติ
+### Fixed
+- แก้โปรแกรมปิดหลังวางสายเบื้องต้น และเก็บ Log เพิ่มเผื่อยังมีปัญหาโปรแกรมปิดหลังวางสายอื่นๆ อีก
+- แก้โปรแกรมให้ป้องกันสายโทรเข้าซ้อนขณะกำลังรับสายอยู่
+
+## [1.1.19] - 2021-10-15
+### Added
+- เพิ่มส่วนของการเลือกรูปแบบการทรานสปอร์ต (Transport) โดยมีให้เลือกคือแบบ UTP TCP และ TLS โดยอยู่ในหัวข้อ Help->Transport Setting
+- เพิ่มปุ่มดึงข้อมูลผู้ติดต่ออีกครั้ง ในกรณีที่ดึงข้อมูลตอนสายเข้าไม่สำเร็จครับ สามารถกดปุ่มเพื่อดึงข้อมูลอีกครั้งระหว่างให้บริการได้
+### Fixed
+- แก้ปัญหาโปรแกรมปิดตอนวางสายเพิ่มเติม
+- แก้ไม่ให้กดปิดโปรแกรม หรือ โปรแกรมปิดตัวเอง ขณะกำลังให้บริการเพิ่มเติม
+- เพิ่ม log ในส่วน ms_media_stream_sessions_uninit เพื่อหาสาเหตุที่ทำให้โปรแกรม Not Response
+
+## [1.1.18] - 2021-09-22
+### Added
+- เพิ่มจำนวนตัวอักษรที่สามารถส่งข้อความจากเจ้าหน้าที่ล่ามจาก 150 ตัวอักษรเป็น 500 ตัวอักษร
+### Fixed
+- แก้ปัญหาโปรแกรมปิดเพราะส่วนการแสดงผลภาพ (swscale-2.dll) มีปัญหาเพิ่มเติม
+- แก้ปัญหาภาพผู้ใช้บริการกระพริบหลังผ่านไป 30 วินาทีเมื่อใช้บริการผ่านช่องทาง Web-RTC
+- แก้ปัญหาเจ้าหน้าที่ล่ามมองไม่เห็นผู้ใช้บริการในส่วนของการแสดงภาพในโปรแกรมเพิ่มเติม
+- แก้ปัญหาโปรแกรมปิดเพราะส่วน รับ-ส่งข้อความ (Chatroom) มีปัญหาเพิ่มเติม
+
+
+## [1.1.17] - 2021-08-20
+### Added
+- เพิ่มปุ่ม Reconnect Chat เพื่อให้เจ้าหน้าที่ล่ามกดเชื่อมต่อข้อความกับผู้ใช้บริการเองได้ เมื่อเจ้าหน้าที่ล่ามหรือผู้ใช้บริการมองไม่เห็นข้อความ
+- เพิ่มการเรียก API ตอนเปิดโปรแกรม TTRS-VRS เพื่อแก้ปัญหา channel ของ Agent ค้างในระบบในกรณีที่โปรแกรมดับ
+### Fixed
+- แก้ปัญหาโปรแกรมปิดเพราะส่วน รับ-ส่งข้อความ (Chatroom) มีปัญหา
+- แก้ปัญหาโปรแกรมปิดหลังวางสายหรือโดนสายยิงเพิ่มเติม
+- แก้ปัญหาเจ้าหน้าที่ล่ามหรือผู้ใช้บริการมองไม่เห็นข้อความโดยให้เชื่อมต่อข้อความแบบอัตโนมัติเมื่อไม่มีการพิมพ์ข้อความนานเกิน 30 วินาทีหลังรับสาย
+
+## [1.1.16] - 2021-07-26
+### Fixed
+- แก้ปัญหาหน้าจอรับสายไม่แสดงเพราการเรียก Timeout API ดึงข้อมูลคิวผิดพลาด
+- แก้ปัญหาโปรแกรมปิดเพราการเรียก Timeout API ดึงข้อมูลคิวผิดพลาด
+
+## [1.1.15] - 2021-07-23
+### Added
+- เปลี่ยนรูปแบบการเชื่อมต่อโปรแกรม TTRS-VRS จาก UTP เป็น TLS
+### Fixed
+- แก้รูปแบบการเรียก Timeout API ดึงข้อมูลคิวให้เป็นแบบ Trade เพื่อป้องกันโปรแกรม TTRS-VRS ค้างเมื่อดึง API ไม่ได้
+- แก้ปัญหาโปรแกรมปิดเพราะการแสดงผลชือผู้ใช้งานผิดพลาด
+- ทดลองแก้ Code เพื่อปัญหาโปรแกรมปิดเพราะ swscale เพิ่มเติม
+
+## [1.1.14] - 2021-07-02
+### Added
+- เปลี่ยน Video codec จาก x264 เป็น openh264 เพื่อแก้ปัญหาระบบภาพและรองรับการแก้ไขในอนาคต
+- เพิ่มปุ่ม Get location button เพื่อดึงตำแหน่งปัจจุบันของผู้ใช้ โดยจะรองรับกับ Mobile App Android version 1.1.9 ขึ้นไป
+- เพิ่มปุ่ม Refresh camera button เพื่อ Refresh เปิด-ปิดกล้องล่ามใหม่ เมื่อเกิดเหตุจอล่ามดำขณะใช้งาน
+- เปลี่ยน GDB Launcher เป็น version 1.0.8 โดย GDB Launcher จะปิดตัวเองเมื่อล่ามปิดโปรแกรม TTRS-VRS
+- เพิ่ม command ลบ file config และ file database เมื่อ uninstall โปรแกรม TTRS-VRS เพื่อ update ค่า config ใหม่เมื่อ install ทุกครั้ง
+### Fixed
+- แก้ปัญหาโปรแกรมปิดเพราะ Compare NULL String
+- แก้ปัญหาโปรแกรมค้างเพราะรอ Timeout API ดึงข้อมูลคิว
+- ลดการแสดง log ในส่วน swscale เพื่อลดขนาด log ที่เก็บข้อมูล
+
+## [1.1.13] - 2021-05-26
+### Added
+- เพิ่มการป้องกันสายโทรเข้าหลังการ login จากส่วนของการตั้งค่า DND ในโปรแกรม TTRS-VRS
+- แก้ปัญหาโปรแกรม TTRS-VRS ดับ ตอนโอนสายใหม่เข้า MCU เนื่องจากดึงข้อมูล User ไม่ได้ เพราะสายที่จะโอนหลุดก่อนที่โปรแกรมจะสั่งโอนสาย
+- Update โปรแกรม GDB เป็น Version 10.2 (ล่าสุด) เพื่อให้รายงานผล error ได้ดีกว่าเดิม
+- เพิ่ม log ตัววาดเพื่อดักจับ Bug โปรแกรม TTRS-VRS ดับ จากปัญหาตัววาด function swscale-2!sws_rgb2rgb_init () ทำงานไม่สมบูรณ์ 
+
+*หมายเหตุ : File log จะมีขนาดใหญ่มากขึ้น เพื่อหาสาเหตุของปัญหา โดยจะทำการแก้ให้ขนาดเล็กลงเหมือนเดิมเมื่อสามารถแก้ปัญหาได้*
+
+## [1.1.12] - 2021-05-17
+### Added
+- ให้จำตำแหน่งและขนาดหน้าต่างโปรแกรม TTRS-VRS ที่ปรับไว้ล่าสุด เมื่อเปิดครั้งต่อไปแสดงหน้าต่างในตำแหน่งเดิม
+- แก้ Bug ฟังก์ชันส่วนแสดงผล Real Time Text (RTT) ที่ทำให้โปรแกรมปิด
+
+## [1.1.11] - 2021-05-16
+### Added
+- แก้ปัญหาการแสดงผลข้อมูลจำนวนล่ามที่รับสาย, ล่ามที่ว่าง และ จำนวนที่รอสายอยู่แบบ Real Time โดยใช้ lib json
+- แก้ปัญหา ระบบ Text มีสายโทรเข้าโปรแกรม TTRS VRS แล้วไม่สามารถกดรับสายได้ โดยแก้เงื่อนไขก่อนเข้าฟังก์ชันรับสายให้ให้ถูกต้อง
+- แก้ปัญหาฟังก์ชันส่วนแสดงผล Real Time Text (RTT) ทำงานผิดพลาดแบบขึ้นหลายบรรทัดเวลาแก้ไข
+- Update mediastreamer2 ในส่วนของ 1.Fix msvideo downscaling function for x86 และ 2.Re-enable android scaler implementation เพื่อดูว่าแก้ปัญหาโปรแกรมดับเพราะ swscale-2!sws_rgb2rgb_init () ได้หรือไม่
+
+## [1.1.10] - 2021-05-06
+### Added
+- นำส่วนการแสดงผลข้อมูลจำนวนล่ามที่รับสาย, ล่ามที่ว่าง และ จำนวนที่รอสายอยู่แบบ Real Time ออกเพื่อหาแนวทางการทำงานที่เหมาะสมแล้วจะเพิ่มเติมให้ในอนาคตครับ
+
+## [1.1.9] - 2021-05-06
+### Added
+- เพิ่ม DND รูปแบบใหม่ (DND+Last) โดยเมื่อเจ้าหน้าที่ล่ามเลือก DND+Last และกลับมาออนไลน์ จะทำให้ลำดับคิวของเจ้าหน้าที่ล่ามย้ายไปอยู่ที่ลำดับสุดท้ายของคิว
+- เพิ่มการแสดงผลข้อมูลจำนวนล่ามที่รับสาย, ล่ามที่ว่าง และ จำนวนที่รอสายอยู่แบบ Real Time ในโปรแกรม
+- แก้ไขโปรแกรมให้กำหนดค่าเริ่มต้น status เป็น busy ก่อนและหลัง login
+- เพิ่มปุ่มไว้ เปิด-ปิด ภาพล่ามจากกล้องแสดงในหน้าจอใหญ่ โดยไม่ต้องกดปุ่ม self view เพื่อทำการดู
+- นำปุ่มวางสายฝั่งขวาเมื่อมีสายเข้าออกไป
+- Update swscale-2.dll เวอร์ชั่นใหม่ เพื่อดูว่าแก้ปัญหาโปรแกรมดับเพราะ swscale-2!sws_rgb2rgb_init () ได้หรือไม่
+- Update GDB.exe Version ใหม่ เพื่อให้รายงานผล error ได้ดีกว่าเดิม
+
+## [1.1.8] - 2021-04-06
+### Added
+- เพิ่มส่วนตรวจสอบการ Logout ของโปรแกรม TTRS-VRS โดยจะทำการส่งเคลียร์คิวของเจ้าหน้าที่ล่ามที่ Logout ออกให้หมดแล้วจึงค่อยปิดโปรแกรม
+- แก้ไขปัญหาโปรแกรม TTRS-VRS ปิดตอนหูหนวกวางสาย เกิดจากการตั้งค่า Default Self View หลังจากสายได้ทำการ Terminate ไปแล้ว
+- แก้ไขปัญหาเมื่อกดโทรแล้วโปรแกรม TTRS-VRS ไม่รับ key ใดๆ และไม่ตอบสนอง เกิดจาก UI สร้าง Dialog เลือกการโทรออกผิดพลาด แก้โดยการจัดลำดับการสร้าง UI ที่แน่นอนและเพิ่ม Time Out เมื่อไม่กดเลือกการโทรใน 10 วินาที
+- แก้ไขให้สามารถใช้ shortcut กด Ctrl+C เพื่อ Copy ข้อความจาก chat ได้
+- แก้ไขให้เวลาเปิดโปรแกรมขึ้นมาไม่แสดงภาพจากกล้อง แต่เวลาสายเข้ากล้องจะเปิดเอง และเวลาวางสายกล้องจะปิดเอง ถ้าล่ามอยากเช็คกล้องก็กดปุ่ม self view แทนได้
+
+
+
+## [1.1.7] - 2021-04-03
+### Added
+- แก้ปัญหาโปรแกรม TTRS-VRS ดับเมื่อวางสาย Receiving เกิดจากการ Clear Chat room ของสายก่อนหน้าไม่หมดทำให้โปรแกรมดับตอนพยายามลบ Chatroom ที่ไม่มีแล้ว แก้ไขโดยการเช็ค Clear Chat room ตอนวางสายให้หมด
+- เพิ่มส่วนปิดห้อง Conference room โดยการกดปุ่มวางสายทั้งหมด เมื่อเจ้าหน้าที่ล่ามต้องการยุติการประชุมและปิดห้อง Conference room ทันทีเมื่อวางสาย Conference
+- เพิ่มให้วางสายทุกสายเมื่อกดปุ่ม Logout
+- กำหนดให้ต้อง Login ทุกครั้งเมื่อเปิดโปรแกรม TTRS-VRS
+
+## [1.1.6] - 2021-03-31
+### Added
+- แก้ปัญหาวางสายคนหูหนวกที่เกิดจาก Audio Stream timeout โดยเพิ่มการเช็ค Video Stream timeout ของสายที่โทรแบบ Video
+- แก้ปัญหาการส่งข้อความที่นำหน้าด้วย Space Bar จากโปรแกรม TTRS-VRS ฝั่งล่าม แล้วทำให้โปรแกรม TTRS Video บน Mobile ดับ โดยป้องกันการขึ้นต้นข้อความด้วย Space Bar
+- แก้ปัญหาไม่บันทึก Chat Log ในบางครั้ง โดยการเพิ่มเงื่อนไขในการบันทึก Chat Log ตอนจบการสนธนาให้ครบทุกเงื่อนไข
+- แก้ปัญหากดปิดลำโพงตอนยังไม่รับสายแล้วโปรแกรม TTRS-VRS ดับ โดยการ Disable ปุ่มควบคุมเสียงไว้จนกว่าสายจะพร้อมใช้งานจึง Enable ปุ่มควบคุมเสียง
+
+## [1.1.5] - 2021-03-26
+### Added
+- เพิ่มรูปแบบการโทรออกให้สามารถเลือกโทรแบบ Audio หรือ Video ได้
+- เพิ่มรูปแบบการโทรแบบประชุมสาย (Conference) ได้
+- เพิ่มรูปแบบการแสดงผลสายปกติที่เป็น Video พร้อมกัน 2 สาย
+- เพิ่มรูปแบบการแสดงผล Self view ให้สามารถปรับขนาดการแสดงผลเจ้าหน้าที่ล่ามได้
+- เพิ่มปุ่มสำหรับ เปิด-ปิด Self view ได้เพราะในการโทรประชุมสายมีการแสดงผลเจ้าหน้าที่ล่ามในภาพอยู่แล้ว
+- ปรับให้ต้อง Login ทุกครั้งที่เปิดโปรแกรม
+- เปลี่ยนปุ่มควบคุมแต่ละสายให้สามารถคุมได้จากทุกแท็บ
+- สายที่เป็นการโทรแบบประชุมสายจะเปลี่ยนชื่อแท็บเป็นคำว่า “Conference”
+- เปลี่ยน icon ปุ่มโทรเข้าแต่ละสาย และปุ่มวางสายทุกสาย
+- เปลี่ยน icon ปุ่มโทร แบบประชุมสาย (Conference)
+
+## [1.1.4] - 2021-03-15
+### Added
+- แก้ไขปัญหาโปรแกรมปิดเกิดจาก UI ใหม่ไม่สามารถวางสาย Miss call ที่เร็วเกิน 1 วินาที เนื่องจากการดึงข้อมูลยังไม่เสร็จ  
+- แก้ไขปัญหาอยู่ๆมี popup ขึ้นให้ login ใหม่ แล้วสถานะหลุด เลยต้อง login ใหม่ถึงจะใช้งานได้
+
+## [1.1.3] - 2021-03-12
+### Added
+- แก้ไขปัญหาโปรแกรมปิดเกิดจาก UI ใหม่ไม่สามารถการรับสายใหม่ขณะที่สายเก่ายังวางสายไม่สมบูรณ์ได้ 
+- แก้ไขปัญหาเลือกเบอร์ที่ประวัติ แล้วกดโทรออกอีกรอบไม่ได้
+
+## [1.1.2] - 2021-03-12
+### Added
+- ปรับปรุง GDB launcher เวอร์ชั่นใหม่ที่สามารถอัพโหลด GDB log ขึ้นเซิร์ฟเวอร์และจะไม่ทำให้โปรแกรมปิดเมื่อ GDB launcher ทำงานผิดปกติ
+- แก้ไขปัญหาการโทรออกเวลาช่องหมายเลขโทรออกเป็นช่องเปล่าได้
+
+## [1.1.1] - 2021-03-11
+### Added
+- แก้ไขปัญหาการแสดงผล Making , VRI, Emergency และ Receiving ที่มีการแสดงใน tab ที่ไม่ถูกต้อง 
+
+## [1.1.0] - 2021-03-08
+### Added
+- ปรับปรุง UI ใหม่ให้สามารถรองรับการทำงานแบบประชุมสาย (Conference) ได้
+
 ## [1.0.14] - 2021-02-26
 ### Added
 - แก้ไขปัญหาโปรแกรมปิดเกิดจากความผิดพลาดในการ Free Memory หลายจุดของ GDB launcher
@@ -132,19 +320,44 @@
 ### TAG
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
-[Released]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
-[1.0.14]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.14/TTRS-VRS-V.1.0.14.exe
-[1.0.13]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.13/TTRS-VRS-V.1.0.13-7-g5a37135.exe
-[1.0.12]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.12/TTRS-VRS-V.1.0.12.exe
-[1.0.11]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.11/TTRS-VRS-V.1.0.11.exe
-[1.0.10]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.10/TTRS-VRS-V.1.0.10-1-g089897a.exe
-[1.0.9]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.9/TTRS-VRS-V.1.0.9-2-g60be0fd.exe
-[1.0.8]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.8/TTRS-VRS-V.1.0.8-1-gd107bf4.exe
-[1.0.7]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.7/TTRS-VRS-V.1.0.7-29-g067e055.exe
-[1.0.6]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.6/TTRS-VRS-V.1.0.6-28-g3155cb4.exe
-[1.0.5]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.5/TTRS-VRS-V.1.0.5-27-gfeec918.exe
-[1.0.4]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.4/TTRS-VRS-V.1.0.4-25-g4f123c5.exe
-[1.0.3]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.3/TTRS-VRS-V.1.0.3-23-g5deb0f0.exe
-[1.0.2]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.2/TTRS-VRS-V.1.0.2-22-g4fb0793.exe
-[1.0.1]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/source/1.0.1/TTRS-VRS-V.1.0.1-21-gacd8d5e.exe
-[logo]: https://gitlab.spinsoft.co.th/pc/ttrs_vrs_changelog/raw/master/TTRS-VRS.png "Logo TTRS VRS"
+[Released]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.24]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.24/TTRS-VRS-V.1.1.24.exe
+[1.1.23]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.23/TTRS-VRS-V.1.1.23.exe
+[1.1.22]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.22/TTRS-VRS-V.1.1.22.exe
+[1.1.21]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.21/TTRS-VRS-V.1.1.21.exe
+[1.1.20]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.20/TTRS-VRS-V.1.1.20.exe
+[1.1.19]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.19/TTRS-VRS-V.1.1.19.exe
+[1.1.18]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.18/TTRS-VRS-V.1.1.18.exe
+[1.1.17]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.17/TTRS-VRS-V.1.1.17.exe
+[1.1.16]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.16/TTRS-VRS-V.1.1.16.exe
+[1.1.15]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.15/TTRS-VRS-V.1.1.15.exe
+[1.1.14]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.14/TTRS-VRS-V.1.1.14.exe
+[1.1.13]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.13/TTRS-VRS-V.1.1.13.exe
+[1.1.12]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.12/TTRS-VRS-V.1.1.12.exe
+[1.1.11]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.11/TTRS-VRS-V.1.1.11.exe
+[1.1.10]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.10/TTRS-VRS-V.1.1.10.exe
+[1.1.9]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.9/TTRS-VRS-V.1.1.9.exe
+[1.1.8]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.8/TTRS-VRS-V.1.1.8.exe
+[1.1.7]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.7/TTRS-VRS-V.1.1.7.exe
+[1.1.6]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.6/TTRS-VRS-V.1.1.6.exe
+[1.1.5]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.5/TTRS-VRS-V.1.1.5.exe
+[1.1.4]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.4/TTRS-VRS-V.1.1.4.exe
+[1.1.3]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.3/TTRS-VRS-V.1.1.3.exe
+[1.1.2]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.2/TTRS-VRS-V.1.1.2.exe
+[1.1.1]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.1/TTRS-VRS-V.1.1.1.exe
+[1.1.0]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.0/TTRS-VRS-V.1.1.0.exe
+[1.0.14]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.14/TTRS-VRS-V.1.0.14.exe
+[1.0.13]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.13/TTRS-VRS-V.1.0.13-7-g5a37135.exe
+[1.0.12]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.12/TTRS-VRS-V.1.0.12.exe
+[1.0.11]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.11/TTRS-VRS-V.1.0.11.exe
+[1.0.10]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.10/TTRS-VRS-V.1.0.10-1-g089897a.exe
+[1.0.9]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.9/TTRS-VRS-V.1.0.9-2-g60be0fd.exe
+[1.0.8]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.8/TTRS-VRS-V.1.0.8-1-gd107bf4.exe
+[1.0.7]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.7/TTRS-VRS-V.1.0.7-29-g067e055.exe
+[1.0.6]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.6/TTRS-VRS-V.1.0.6-28-g3155cb4.exe
+[1.0.5]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.5/TTRS-VRS-V.1.0.5-27-gfeec918.exe
+[1.0.4]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.4/TTRS-VRS-V.1.0.4-25-g4f123c5.exe
+[1.0.3]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.3/TTRS-VRS-V.1.0.3-23-g5deb0f0.exe
+[1.0.2]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.2/TTRS-VRS-V.1.0.2-22-g4fb0793.exe
+[1.0.1]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.0.1/TTRS-VRS-V.1.0.1-21-gacd8d5e.exe
+[logo]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/TTRS-VRS.png "Logo TTRS VRS"
