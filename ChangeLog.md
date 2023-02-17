@@ -6,13 +6,18 @@
 
 ## [Released] (Last version)
 
-## [1.1.24] - 2022-09-23
+## [1.1.24] - 2023-02-17
 ### Added
 - เปลี่ยน GDB Launcher เป็น version 1.1.0 โดย GDB Launcher จะช่วยทำการบันทึกหน้าจอเมื่อมีการบริการแบบอัตโนมัติ
 - เพิ่มการตรวจสอบการส่ง signal ของการ logout และรอจนน่ใจว่าส่งได้ จึงจะปิดโปรแกรม
 - เพิ่มการตรวจสอบการส่ง log ไปยังเซิร์ฟเวอร์และรอจนน่ใจว่าส่งได้ จึงจะทำงานต่อ
+
 ### Fixed
 - ปรับการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ให้ทำการวางสายคนหูหนวก ถ้าคนหูดีวางสายก่อนคนหูหนวกจะรับสาย
+- ปรับเพิ่ม Buffer ของการรับตัวอักษร เพื่อแก้ปัญหาโปรแกรมแสดงข้อความไม่ครบเพราะ Buffer ไม่พอ
+- ปรับส่วนของการเลือกรูปแบบการโทรออกให้แสดงที่จุดกดปุ่มโทรออกแทนการแสดงตรงกลางจอ เพื่อป้องกันไม่ให้หน้าต่างแสดงผลบังหน้าจอแสดงผล
+- ปรับสีของช่องพิมพ์ข้อความให้ดูชัดเจนขึ้น
+- ปรับสีของช่องเลือกอุปกรณ์ในส่วนตั้งค่าเพื่อให้ไม่สับสนเมื่อรายชื่ออุปกรณ์คล้ายกัน
 
 ## [1.1.23] - 2022-08-05
 ### Added
@@ -321,7 +326,7 @@
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
 [Released]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
-[1.1.24]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.24/TTRS-VRS-V.1.1.24.exe
+[1.1.24]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.24/TTRS-VRS-V.1.1.24-5-ge03e0ff.exe
 [1.1.23]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.23/TTRS-VRS-V.1.1.23.exe
 [1.1.22]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.22/TTRS-VRS-V.1.1.22.exe
 [1.1.21]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.21/TTRS-VRS-V.1.1.21.exe
