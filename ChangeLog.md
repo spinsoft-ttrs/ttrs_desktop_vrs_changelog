@@ -6,6 +6,17 @@
 
 ## [Released] (Last version)
 
+## [1.1.25] - 2024-04-02
+### Added
+- เพิ่มการบันทึก Chat log กรณีสายนั้นเรียก API เพื่อดึงข้อมูลสายไม่ได้ โดยบันทึกหลังจากที่จบการให้บริการแล้ว
+- ปรับปรุงการลบ Temporary file ของโปรแกรมบันทึกหน้าจอ v1.1.5 ที่ลบไม่สมบูรณ์ระหว่างการให้บริการ ให้สามารถตามลบเมื่อ Temporary file นั้นพร้อมให้ลบได้
+- แสดงสถานะความพร้อมของการระบบบันทึกหน้าจออัตโนมัติ ที่หน้าโปรแกรม
+### Fixed
+- ปรับการรับสายแบบ Receiving ที่ติดต่อคนหูหนวกด้วยหมายเลข TTRS Number ถ้าคนหูหนวกรับสาย และคุยจบ หากคนหูหนวกหรือคนหูดีวางสายไปก่อน ระบบจะไม่มีการตัดสายอีกฝั่ง
+- แก้ปัญหาสาย Receiving เข้าแล้ว มีการ pause หรือโทรออกที่เร็วเกินไป จนทำให้โปรแกรมไม่ส่ง Answer ในกรณีที่สายหลุดหรือวางสายไปที่ Asterisk โดยตรวจสอบสายเข้าให้แน่ใจก่อน pause หรือโทรออก
+- ปรับ SIP Domain จาก ttrs.in.th เป็น ttrs.or.th
+- ปรับ API Domain จาก ttrs.in.th เป็น ttrs.or.th
+
 ## [1.1.24] - 2023-02-21
 ### Added
 - เปลี่ยน GDB Launcher เป็น version 1.1.0 โดย GDB Launcher จะช่วยทำการบันทึกหน้าจอเมื่อมีการบริการแบบอัตโนมัติ
@@ -326,7 +337,6 @@
 ### TAG
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
-[Released]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
 [1.1.24]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.24/TTRS-VRS-V.1.1.24-6-g400fd38.exe
 [1.1.23]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.23/TTRS-VRS-V.1.1.23.exe
 [1.1.22]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.22/TTRS-VRS-V.1.1.22.exe
