@@ -337,6 +337,8 @@
 ### TAG
 - Commit [acd8d5e](https://bitbucket.org/nectec_vrs/linphone-desktop-3-9-1-rtt/commits/acd8d5e38fd2184db490cd3485edf6ef50e0ebdc?at=vrs-dev-newrtt)
 
+[Released]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/Released/TTRS-VRS-current.zip
+[1.1.25]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.25/TTRS-VRS-V.1.1.25-2-g4f19494.exe
 [1.1.24]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.24/TTRS-VRS-V.1.1.24-6-g400fd38.exe
 [1.1.23]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.23/TTRS-VRS-V.1.1.23.exe
 [1.1.22]: https://github.com/spinsoft-ttrs/ttrs_desktop_vrs_changelog/raw/master/source/1.1.22/TTRS-VRS-V.1.1.22.exe
